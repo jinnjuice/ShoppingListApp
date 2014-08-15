@@ -15,10 +15,11 @@ app.factory('Store',
                     store.owner = user.username;
 
                     return stores.$add(store).then(function(ref){
-                        $location.path('/createList');
+
                         var storeId = ref.name();
 
                         user.$child('stores').$child(storeId).$set(storeId);
+                        $location.path('/createList');
 
                         return storeId;
                     });

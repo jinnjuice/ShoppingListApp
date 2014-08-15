@@ -51,7 +51,7 @@ app.config(function ($routeProvider) {
         })
         .when('/addStore', {
             templateUrl: 'views/newStore.html',
-            controller: 'StoresController'
+            controller : 'StoresController'
         })
         .otherwise({
             redirectTo : '/'

@@ -1,6 +1,9 @@
 'use strict';
 
-app.controller('StoresController', function($scope, $location, $routeParams, Store){
+app.controller('StoresController', function($scope, $location, Store){
+    if ($location.path() === '/addStore') {
+        $scope.stores = Store.all;
+    }
 
     $scope.store = { name: '', address: '', number: '' };
 
