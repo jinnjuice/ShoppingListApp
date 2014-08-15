@@ -1,0 +1,26 @@
+<div class="container lists-page">
+    <div class="list row" ng-repeat="(listId, list) in lists">
+        <div class="col-xs-1">
+
+        </div>
+        <div class="col-md-9 col-xs-11">
+            <div class="info">
+                <a href="#/lists/{{ listId }}">
+                    {{ list.title }} - {{ list.date }}
+                </a>
+            </div>
+            <div>
+                <span> created by <a href="#/users/{{ list.owner }}">{{ list.owner }}</a></span>
+                <a ng-click="deleteList(listId)" ng-show="signedIn() && list.owner === currentUser.username">Delete</a>
+            </div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+
+    <a href="#/createList">
+        <button class="navbar-brand">Make a new list</button>
+    </a>
+</div>
+

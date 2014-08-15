@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">My Shopping List</a>
+    </div>
+
+    <div ng-controller="NavController" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" ng-show="signedIn()">
+            <li>
+                <a href="#/users/{{ currentUser.username }}">
+                    <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" class="nav-pic"/>
+                    {{ currentUser.username }}
+                </a>
+            </li>
+            <li>
+                <a href="#" ng-click="logout()">Logout</a>
+            </li>
+        </ul>
+        <ul>
+            <ul class="nav navbar-nav navbar-right" ng-hide="signedIn()">
+                <li>
+                    <a href="#/register">Register</a>
+                </li>
+                <li>
+                    <a href="#/login">Log In</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</nav>
