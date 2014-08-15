@@ -46,25 +46,25 @@ app.factory('List',
                 }
             },
 
-            addComment: function(listId, comment){
+            addRequest: function(listId, request){
                 if (User.signedIn()){
                     var user = User.getCurrent();
 
-                    comment.username = user.username;
-                    comment.listId = listId;
+                    request.username = user.username;
+                    request.listId = listId;
 
-                    lists.$child(listId).$child('comments').$add(comment).then(function(ref){
-                        user.$child('comments').$child(ref.name()).$set({ id: ref.name(), listId: listId});
+                    lists.$child(listId).$child('requests').$add(request).then(function(ref){
+                        user.$child('requests').$child(ref.name()).$set({ id: ref.name(), listId: listId});
                     });
                 }
             },
 
-            deleteComment: function(list, comment, commentId){
+            deleteRequest: function(list, request, requestId){
                 if (User.signedIn()) {
                     var user = User.findByUsername(comment.username);
 
-                    list.$child('comments').$remove(commentId).then(function(){
-                        user.$child('comments').$remove(commentId);
+                    list.$child('requests').$remove(requestId).then(function(){
+                        user.$child('requests').$remove(requestId);
                     });
                 }
             }

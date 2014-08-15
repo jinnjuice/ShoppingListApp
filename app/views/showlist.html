@@ -20,12 +20,12 @@
         </div>
     </div>
 
-    <div ng-repeat="(commentId, comment) in list.comments" class="row cmt">
+    <div ng-repeat="(requestId, request) in list.requests" class="row cmt">
         <div class="col-md-12">
-            <p><input type="checkbox" ng-model="list.cb"> {{ comment.text }}</p>
-            <p class="author">posted by <a href="#/users/{{ comment.username }}">{{ comment.username }}</a>
-            <a ng-click="removeComment(comment, commentId)"
-               ng-show="signedIn() && comment.username === currentUser.username">(delete)</a></p>
+            <p><input type="checkbox"/> {{ request.text }}</p>
+            <p class="author">posted by <a href="#/users/{{ request.username }}">{{ request.username }}</a>
+            <a ng-click="removeRequest(request, requestId)"
+               ng-show="signedIn() && request.username === currentUser.username">(delete)</a></p>
         </div>
     </div>
 
@@ -35,8 +35,8 @@
         </div>
 
         <form ng-show="signedIn()">
-            <input type="text" ng-model="comment.text" placeholder="List a request" class="form-control"><br/>
-            <input type="submit" ng-click="addComment()" value="Submit Request" class="btn btn-primary"/>
+            <input type="text" ng-model="request.text" placeholder="List a request" class="form-control" ><br/>
+            <input type="submit" ng-hide="!request.text.length" ng-click="addRequest()" value="Submit Request" class="btn btn-primary"/>
         </form>
     </div>
 </div>
