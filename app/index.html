@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
+    <link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
@@ -22,14 +23,13 @@
 
     <!-- Add your site or application content here -->
     <div ng-include="'views/nav.html'"></div>
-    <div class="container" ng-view="">
+
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-        </ul>
       </div>
 
-      <div ng-view=""></div>
+    <div class="container" ng-view="">
+
+    <div ng-view=""></div>
 
     </div>
 

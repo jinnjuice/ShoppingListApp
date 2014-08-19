@@ -12,11 +12,42 @@
                 <p ng-show="form.username.$error.invalid" class="text-danger">Username contains invalid characters.</p>
             </div>
 
-            <input type="email" ng-model="user.email" placeholder="Email" class="form-control"><br>
-            <input type="text" ng-model="user.username" placeholder="Username" name="username"
-                   check-username class="form-control"><br>
-            <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
-            <input type="submit" value="Register" class="btn btn-primary form-control"/>
+            <div class="row">
+
+                <div class="col-md-3">
+                    <p>Email:</p>
+                </div>
+                <div class="col-md-9">
+                    <input style="display: inline;" type="email" ng-model="user.email" class="form-control" required />
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <p>Username:</p>
+                </div>
+                <div class="col-md-9">
+                    <input style="display: inline;" type="text" ng-model="user.username" name="username" check-username class="form-control" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <p>Password:</p>
+                </div>
+                <div class="col-md-9">
+                    <input style="display: inline;" type="password" ng-model="user.password" class="form-control" required>
+                </div>
+
+            </div>
+
+            <div class="row submit-button">
+                <input type="submit" value="Register" class="btn btn-primary form-control"/>
+            </div>
 
         </form>
 
