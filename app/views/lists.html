@@ -1,26 +1,31 @@
-<div class="container lists-page">
-    <div class="list row" ng-repeat="(listId, list) in lists">
-        <div class="col-xs-1">
+<div class="notepage">
+
+    <div class="container lists-page">
+
+        <div class="list row" ng-repeat="(listId, list) in lists">
+
+            <div class="eachlist">
+
+                <div class="info">
+                    <a href="#/lists/{{ listId }}">
+                        {{ list.title }} - {{ list.date }}
+                    </a>
+                </div>
+
+                <div>
+                    <span> created by <a href="#/users/{{ list.owner }}">{{ list.owner }}</a></span>
+                    <a ng-click="deleteList(listId)" ng-show="signedIn() && list.owner === currentUser.username">Delete</a>
+                </div>
+
+            </div>
 
         </div>
-        <div class="col-md-9 col-xs-11">
-            <div class="info">
-                <a href="#/lists/{{ listId }}">
-                    {{ list.title }} - {{ list.date }}
-                </a>
-            </div>
-            <div>
-                <span> created by <a href="#/users/{{ list.owner }}">{{ list.owner }}</a></span>
-                <a ng-click="deleteList(listId)" ng-show="signedIn() && list.owner === currentUser.username">Delete</a>
-            </div>
-        </div>
-        <div class="col-md-2">
 
+        <div class="row" href="#/createList" ng-show="signedIn()">
+            <button class="pagebutton">Make a new list</button>
         </div>
     </div>
 
-    <a href="#/createList" ng-show="signedIn()">
-        <button class="navbar-brand">Make a new list</button>
-    </a>
 </div>
+
 

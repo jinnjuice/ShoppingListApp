@@ -1,12 +1,37 @@
-<div class="auth-forms">
+<div class="notebook">
 
-    <h2>Log In</h2>
+    <div class="auth-forms">
 
-    <form ng-submit="login()">
-        <p ng-show="error" class="text-danger">{{ error }}</p>
-        <input type="email" ng-model="user.email" placeholder="Email" class="form-control"><br>
-        <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
-        <input type="submit" value="Log In" class="btn btn-primary"/>
-    </form>
+        <h2>Log In</h2>
+
+        <form ng-submit="login()">
+            <p ng-show="error" class="text-danger">{{ error }}</p>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Email:</p>
+                </div>
+                <div class="col-md-9">
+                    <input type="email" ng-model="user.email" placeholder="" class="form-control" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <p>Password:</p>
+                </div>
+                <div class="col-md-9">
+                    <input type="password" ng-model="user.password" placeholder="" class="form-control" required/>
+                </div>
+            </div>
+
+            <div class="row submit-button">
+                <input type="submit" value="Log In" class="btn btn-primary form-control" />
+            </div>
+
+
+        </form>
+
+    </div>
 
 </div>

@@ -26,7 +26,6 @@ body {
 
 .info {
     font-weight: bolder;
-    font-size: 16px;
 }
 
 .info .url {
@@ -129,6 +128,71 @@ body {
     border-left: 70px solid #000;
     background-image: url(../images/CompositionPattern.jpg);
 }
+
+.notepage {
+    width: 60%;
+    height: 900px;
+    background-image: url(../images/notebookpage.png);
+    background-size: cover;
+    margin: 100px auto;
+    -webkit-box-shadow: 2px -1px white,
+                        4px -2px grey,
+                        6px -3px white,
+                        8px -4px grey,
+                       10px -5px white,
+                       12px -6px grey;
+    -moz-box-shadow: 2px -1px white,
+                     4px -2px grey,
+                     6px -3px white,
+                     8px -4px grey
+                    10px -5px white,
+                    12px -6px grey;
+    box-shadow: 2px -1px white,
+                4px -2px grey,
+                6px -3px white,
+                8px -4px grey,
+                10px -5px white,
+                12px -6px grey;
+    border-radius: 5px 20px 20px 8px;
+    border: 1px solid #696767;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+
+.eachlist {
+    padding-bottom: 15px;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 20px;
+}
+
+.pagebutton {
+    height: 40px;
+    width: 125px;
+    background-color: #7c8c9c;
+    border-radius: 5px;
+    color: white;
+}
+
+.page-heading {
+    float: right;
+
+}
+
+.page-margin-left {
+    width: 25%;
+    border-right: 2px solid #d04e7e;
+}
+
+.page-margin-right {
+    width: 25%;
+    border-left: 2px solid #00bfff;
+}
+
+.page-middle {
+    width: 50%;
+}
+
 
 .submit-button {
     width: 60%;

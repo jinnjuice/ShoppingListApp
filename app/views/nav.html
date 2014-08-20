@@ -7,19 +7,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand navbar" id="main-title" href="#">My Shopping List</a>
+        <a class="navbar navbar-brand" id="main-title" href="#">My Shopping List</a>
     </div>
 
     <div ng-controller="NavController" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right" ng-show="signedIn()">
-            <li>
+        <ul class="navbar nav navbar-nav navbar-right" ng-show="signedIn()">
+            <li  id="navbarname">
                 <a href="#/users/{{ currentUser.username }}">
-                    <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" class="nav-pic"/>
+                    <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}"
+                         class="nav-pic"/>
                     {{ currentUser.username }}
                 </a>
             </li>
             <li>
-                <a href="#" ng-click="logout()">Logout</a>
+                <a id="logout" href="#" ng-click="logout()">Logout</a>
             </li>
         </ul>
         <ul>
