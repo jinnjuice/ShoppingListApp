@@ -1,6 +1,6 @@
 <div class="notepage">
 
-    <div class="container lists-page">
+    <div class="container all-lists">
 
         <div class="list row" ng-repeat="(listId, list) in lists">
 
@@ -21,9 +21,9 @@
 
         </div>
 
-        <div class="row" href="#/createList" ng-show="signedIn()">
+        <a class="row" href="#/createList" ng-show="signedIn()">
             <button class="pagebutton">Make a new list</button>
-        </div>
+        </a>
     </div>
 
 </div>

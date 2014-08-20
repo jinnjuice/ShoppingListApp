@@ -156,9 +156,19 @@ body {
     border-radius: 5px 20px 20px 8px;
     border: 1px solid #696767;
     padding-left: 10%;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
+.all-lists {
+    margin-top: 10%;
+    padding-bottom: 15px;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 20px;
+}
+
+.list-title {
+    margin-bottom: 5%;
+}
 
 .eachlist {
     padding-bottom: 15px;
@@ -166,12 +176,28 @@ body {
     font-size: 20px;
 }
 
+.eachitem {
+    font-size: 18px;
+}
+
 .pagebutton {
     height: 40px;
-    width: 125px;
-    background-color: #7c8c9c;
+    width: 150px;
+    background-color: transparent;
+    border: 3px solid #444444;
+    box-shadow: 3px 3px #232323;
     border-radius: 5px;
-    color: white;
+    color: #232323;
+}
+
+.pagebutton:active {
+    box-shadow: -3px -3px #232323;
+    text-decoration: none;
+}
+
+.button-group {
+    padding-top: 15px;
+    padding-left: 20%;
 }
 
 .page-heading {
@@ -197,6 +223,10 @@ body {
 .submit-button {
     width: 60%;
     margin: 15px auto 10px;
+}
+
+.requestbox {
+    width: 80%;
 }
 
 .col-md-3 > p {

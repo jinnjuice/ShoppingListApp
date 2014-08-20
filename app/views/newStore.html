@@ -1,37 +1,40 @@
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <form class="navbar-form navbar-left" role="search" ng-submit="submitStore()" ng-show="signedIn()">
-        <div class="form-group">Add a new store: </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Store Name" ng-model="store.name" required>
-            <input type="text" class="form-control" placeholder="Address" ng-model="store.address" required>
-            <input type="tel" class="form-control" placeholder="Phone Number (optional)" ng-model="store.number">
-        </div>
-
-        <button type="submit" class="btn btn-default">Done</button><br />
-    </form>
-
-</div>
-
-<div class="container lists-page">
-    <div class="list row" ng-repeat="(storeId, store) in stores">
-        <div class="col-xs-1">
-
-        </div>
-        <div class="col-md-9 col-xs-11">
-            <div class="info">
-                <a href="#/stores/{{ storeId }}">
-                    {{ store.name }} - {{ store.address }}
-                </a>
+<div class="notepage eachlist">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-left" role="search" ng-submit="submitStore()" ng-show="signedIn()">
+            <div class="form-group">Add a new store: </div>
+            <div class="requestbox form-group">
+                <input type="text" class="form-control" placeholder="Store Name" ng-model="store.name" required>
+                <input type="text" class="form-control" placeholder="Address" ng-model="store.address" required>
             </div>
-            <div>
-                <span> created by <a href="#/users/{{ store.owner }}">{{ store.owner }}</a></span>
-                <a ng-click="deleteStore(storeId)" ng-show="signedIn() && store.owner === currentUser.username">Delete</a>
-            </div>
-        </div>
-        <div class="col-md-2">
 
-        </div>
+            <div class="button-group">
+                <button type="submit" class="pagebutton">Done</button>
+            </div>
+
+        </form>
+
     </div>
 
+    <div class="container lists-page">
+        <div class="list row" ng-repeat="(storeId, store) in stores">
+            <div class="eachlist">
+                <div class="info">
+                    <a href="#/stores/{{ storeId }}">
+                        {{ store.name }} - {{ store.address }}
+                    </a>
+                </div>
+                <div>
+                    <span> created by <a href="#/users/{{ store.owner }}">{{ store.owner }}</a></span>
+                    <a ng-click="deleteStore(storeId)" ng-show="signedIn() && store.owner === currentUser.username">Delete</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+    </div>
 </div>
+
+
 

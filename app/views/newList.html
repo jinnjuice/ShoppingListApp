@@ -1,20 +1,32 @@
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <form class="navbar-form navbar-left" role="search" ng-submit="submitList()" ng-show="signedIn()" required>
+<div class="notepage eachlist">
 
-        <div class="form-group">Create a new list: </div>
+    <div class="" id="bs-example-navbar-collapse-1">
+        <form style="padding: 10px 0" class="navbar-form navbar-left" role="search" ng-submit="submitList()"
+              ng-show="signedIn()"
+        required>
 
-        <select class="form-control" ng-model="list.title">
-            <option ng-repeat="(storeId, store) in stores">{{ store.name }}</option>
-        </select>
+            <div class="form-group">Create a new list: </div>
 
-        <div class="form-group">
-            <input type="date" class="form-control" placeholder="When?" ng-model="list.date" required>
-        </div>
+            <select class="form-group" ng-model="list.title">
+                <option ng-repeat="(storeId, store) in stores">{{ store.name }}</option>
+            </select>
 
-        <button type="submit" class="btn btn-default">Done</button><br />
+            <div class="form-group">
+                <input type="date" class="form-control" placeholder="When?" ng-model="list.date" required>
+            </div>
 
-        <a href="#/addStore"> Add a store</a>
+            <div class="row button-group">
 
-    </form>
+                <a href="#/addStore">
+                    <button class="pagebutton"> Add a store</button>
+                </a>
+                <button type="submit" class="pagebutton">Done</button>
+            </div>
+
+        </form>
+
+    </div>
 
 </div>
+
+
