@@ -61,7 +61,7 @@ app.factory('List',
 
             deleteRequest: function(list, request, requestId){
                 if (User.signedIn()) {
-                    var user = User.findByUsername(comment.username);
+                    var user = User.findByUsername(request.username);
 
                     list.$child('requests').$remove(requestId).then(function(){
                         user.$child('requests').$remove(requestId);
